@@ -11,12 +11,12 @@
 
 
 
-class KrampusHackProject : public Screen
+class KrampusHack2018 : public Screen
 {
 public:
    Screen *current_screen;
    AudioController audio_controller;
-	KrampusHackProject(Display *display)
+	KrampusHack2018(Display *display)
       : Screen(display)
       , current_screen(nullptr)
       , audio_controller()
@@ -74,7 +74,7 @@ int main(int argc, char **argv)
 {
 	Framework::initialize();
 	Display *display = Framework::create_display(1280, 720, ALLEGRO_OPENGL | ALLEGRO_PROGRAMMABLE_PIPELINE);
-   KrampusHackProject *proj = new KrampusHackProject(display);
+   KrampusHack2018 krampushack2018(display);
 	Framework::run_loop();
 	return 0;
 }
