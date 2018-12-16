@@ -1,12 +1,12 @@
 
 
 
-#include <krampushack2018/models/hud.h>
+#include <krampushack2018/models/hud.hpp>
 
 #include <allegro_flare/framework.h>
 #include <allegro_flare/image_processing.h>
 #include <allegro_flare/objects/text_object.h>
-#include <krampushack2018/item_type_nums.h>
+#include <krampushack2018/item_type_nums.hpp>
 #include <sstream>
 
 

@@ -2,8 +2,8 @@
 
 
 
-#include <krampushack2018/sprite_sheet.h>
-#include <krampushack2018/models/item_dialogue.h>
+#include <krampushack2018/sprite_sheet.hpp>
+#include <krampushack2018/models/item_dialogue.hpp>
 
 
 

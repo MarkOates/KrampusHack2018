@@ -1,17 +1,17 @@
 
 
 
-#include <krampushack2018/screens/game_play_screen.h>
+#include <krampushack2018/screens/game_play_screen.hpp>
 
 #include <allegro_flare/allegro_flare.h>
 #include <allegro_flare/user_event_emitter.h>
-#include <krampushack2018/entities/door_entity.h>
-#include <krampushack2018/factories/entity_factory.h>
-#include <krampushack2018/factories/scene_factory.h>
-#include <krampushack2018/helpers/scene_collection_helper.h>
-#include <krampushack2018/item_type_nums.h>
-#include <krampushack2018/music_track_nums.h>
-#include <krampushack2018/user_events.h>
+#include <krampushack2018/entities/door_entity.hpp>
+#include <krampushack2018/factories/entity_factory.hpp>
+#include <krampushack2018/factories/scene_factory.hpp>
+#include <krampushack2018/helpers/scene_collection_helper.hpp>
+#include <krampushack2018/item_type_nums.hpp>
+#include <krampushack2018/music_track_nums.hpp>
+#include <krampushack2018/user_events.hpp>
 
 
 

@@ -3,13 +3,13 @@
 
 #include <allegro_flare/framework.h>
 #include <allegro_flare/image_processing.h>
-#include <krampushack2018/factories/entity_factory.h>
-#include <krampushack2018/entities/background_entity.h>
-#include <krampushack2018/entities/door_entity.h>
-#include <krampushack2018/entities/damage_zone_entity.h>
-#include <krampushack2018/entities/item_entity.h>
-#include <krampushack2018/entities/krampus_entity.h>
-#include <krampushack2018/item_type_nums.h>
+#include <krampushack2018/factories/entity_factory.hpp>
+#include <krampushack2018/entities/background_entity.hpp>
+#include <krampushack2018/entities/door_entity.hpp>
+#include <krampushack2018/entities/damage_zone_entity.hpp>
+#include <krampushack2018/entities/item_entity.hpp>
+#include <krampushack2018/entities/krampus_entity.hpp>
+#include <krampushack2018/item_type_nums.hpp>
 
 
 

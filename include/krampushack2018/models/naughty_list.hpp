@@ -2,8 +2,8 @@
 
 
 
-#include <krampushack2018/entities/kid_entity.h>
-#include <krampushack2018/generators/kid_name_generator.h>
+#include <krampushack2018/entities/kid_entity.hpp>
+#include <krampushack2018/generators/kid_name_generator.hpp>
 #include <string>
 #include <vector>
 

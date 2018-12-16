@@ -1,15 +1,15 @@
 
 
 
-#include <krampushack2018/helpers/game_play_screen_state_helper.h>
+#include <krampushack2018/helpers/game_play_screen_state_helper.hpp>
 
 #include <allegro_flare/user_event_emitter.h>
-#include <krampushack2018/factories/dialogue_factory.h>
-#include <krampushack2018/helpers/scene_collection_helper.h>
-#include <krampushack2018/screens/game_play_screen.h>
-#include <krampushack2018/item_type_nums.h>
-#include <krampushack2018/music_track_nums.h>
-#include <krampushack2018/user_events.h>
+#include <krampushack2018/factories/dialogue_factory.hpp>
+#include <krampushack2018/helpers/scene_collection_helper.hpp>
+#include <krampushack2018/screens/game_play_screen.hpp>
+#include <krampushack2018/item_type_nums.hpp>
+#include <krampushack2018/music_track_nums.hpp>
+#include <krampushack2018/user_events.hpp>
 
 
 

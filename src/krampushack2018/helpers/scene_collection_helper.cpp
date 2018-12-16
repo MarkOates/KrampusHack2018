@@ -1,7 +1,7 @@
 
 
 
-#include <krampushack2018/helpers/scene_collection_helper.h>
+#include <krampushack2018/helpers/scene_collection_helper.hpp>
 
 
 

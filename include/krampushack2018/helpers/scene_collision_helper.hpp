@@ -2,8 +2,8 @@
 
 
 
-#include <krampushack2018/models/scene.h>
-#include <krampushack2018/helpers/scene_collection_helper.h>
+#include <krampushack2018/models/scene.hpp>
+#include <krampushack2018/helpers/scene_collection_helper.hpp>
 
 
 

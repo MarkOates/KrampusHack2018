@@ -1,7 +1,7 @@
 
 
 
-#include <krampushack2018/models/naughty_list.h>
+#include <krampushack2018/models/naughty_list.hpp>
 #include <allegro_flare/useful.h>
 
 

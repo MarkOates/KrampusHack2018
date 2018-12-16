@@ -1,7 +1,7 @@
 
 
 
-#include <krampushack2018/entities/damage_zone_entity.h>
+#include <krampushack2018/entities/damage_zone_entity.hpp>
 
 
 

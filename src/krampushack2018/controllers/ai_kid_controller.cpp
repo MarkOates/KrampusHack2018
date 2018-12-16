@@ -1,7 +1,7 @@
 
 
 
-#include <krampushack2018/controllers/ai_kid_controller.h>
+#include <krampushack2018/controllers/ai_kid_controller.hpp>
 
 
 

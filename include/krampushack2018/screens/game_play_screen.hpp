@@ -5,13 +5,13 @@
 #include <allegro_flare/screen.h>
 #include <allegro_flare/inventory.h>
 
-#include <krampushack2018/controllers/player_krampus_controller.h>
-#include <krampushack2018/controllers/ai_kid_controller.h>
-#include <krampushack2018/helpers/game_play_screen_state_helper.h>
-#include <krampushack2018/models/camera.h>
-#include <krampushack2018/models/hud.h>
-#include <krampushack2018/models/naughty_list.h>
-#include <krampushack2018/models/scene.h>
+#include <krampushack2018/controllers/player_krampus_controller.hpp>
+#include <krampushack2018/controllers/ai_kid_controller.hpp>
+#include <krampushack2018/helpers/game_play_screen_state_helper.hpp>
+#include <krampushack2018/models/camera.hpp>
+#include <krampushack2018/models/hud.hpp>
+#include <krampushack2018/models/naughty_list.hpp>
+#include <krampushack2018/models/scene.hpp>
 
 
 

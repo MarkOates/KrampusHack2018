@@ -1,7 +1,7 @@
 
 
 
-#include <krampushack2018/models/item_dialogue.h>
+#include <krampushack2018/models/item_dialogue.hpp>
 
 #include <allegro_flare/objects/text_object.h>
 #include <allegro_flare/color.h>

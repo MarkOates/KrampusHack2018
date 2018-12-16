@@ -1,11 +1,11 @@
 
 
 
-#include <krampushack2018/factories/dialogue_factory.h>
+#include <krampushack2018/factories/dialogue_factory.hpp>
 
 #include <allegro_flare/framework.h>
-#include <krampushack2018/models/item_dialogue.h>
-#include <krampushack2018/item_type_nums.h>
+#include <krampushack2018/models/item_dialogue.hpp>
+#include <krampushack2018/item_type_nums.hpp>
 
 
 

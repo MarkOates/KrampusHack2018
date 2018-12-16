@@ -1,11 +1,11 @@
 
 
 
-#include <krampushack2018/screens/storyboard_screen.h>
+#include <krampushack2018/screens/storyboard_screen.hpp>
 
 #include <allegro_flare/user_event_emitter.h>
 #include <allegro_flare/framework.h>
-#include <krampushack2018/user_events.h>
+#include <krampushack2018/user_events.hpp>
 
 
 

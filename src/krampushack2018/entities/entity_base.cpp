@@ -1,7 +1,7 @@
 
 
 
-#include <krampushack2018/entities/entity_base.h>
+#include <krampushack2018/entities/entity_base.hpp>
 
 
 

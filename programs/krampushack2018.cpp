@@ -3,11 +3,11 @@
 
 #include <allegro_flare/allegro_flare.h>
 
-#include <krampushack2018/controllers/audio_controller.h>
-#include <krampushack2018/factories/storyboard_factory.h>
-#include <krampushack2018/screens/title_screen.h>
-#include <krampushack2018/screens/game_play_screen.h>
-#include <krampushack2018/user_events.h>
+#include <krampushack2018/controllers/audio_controller.hpp>
+#include <krampushack2018/factories/storyboard_factory.hpp>
+#include <krampushack2018/screens/title_screen.hpp>
+#include <krampushack2018/screens/game_play_screen.hpp>
+#include <krampushack2018/user_events.hpp>
 
 
 

@@ -1,10 +1,10 @@
 
 
 
-#include <krampushack2018/entities/entity_base.h>
-#include <krampushack2018/helpers/scene_collection_helper.h>
-#include <krampushack2018/helpers/scene_collision_helper.h>
-#include <krampushack2018/models/scene.h>
+#include <krampushack2018/entities/entity_base.hpp>
+#include <krampushack2018/helpers/scene_collection_helper.hpp>
+#include <krampushack2018/helpers/scene_collision_helper.hpp>
+#include <krampushack2018/models/scene.hpp>
 #include <algorithm>
 
 

@@ -4,7 +4,7 @@
 
 #include <allegro_flare/display.h>
 #include <allegro_flare/motion.h>
-#include <krampushack2018/entities/entity_base.h>
+#include <krampushack2018/entities/entity_base.hpp>
 
 
 

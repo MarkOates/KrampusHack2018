@@ -2,7 +2,7 @@
 
 
 
-#include <krampushack2018/entities/kid_entity.h>
+#include <krampushack2018/entities/kid_entity.hpp>
 
 
 

@@ -1,7 +1,7 @@
 
 
 
-#include <krampushack2018/sprite_sheet.h>
+#include <krampushack2018/sprite_sheet.hpp>
 
 #include <allegro_flare/framework.h>
 #include <allegro_flare/image_processing.h>

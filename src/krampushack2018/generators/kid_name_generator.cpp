@@ -1,7 +1,7 @@
 
 
 
-#include <krampushack2018/generators/kid_name_generator.h>
+#include <krampushack2018/generators/kid_name_generator.hpp>
 
 #include <algorithm>
 

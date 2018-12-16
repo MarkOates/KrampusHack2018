@@ -1,12 +1,12 @@
 
 
 
-#include <krampushack2018/entities/krampus_entity.h>
+#include <krampushack2018/entities/krampus_entity.hpp>
 
 #include <allegro_flare/user_event_emitter.h>
-#include <krampushack2018/factories/entity_factory.h>
-#include <krampushack2018/music_track_nums.h>
-#include <krampushack2018/user_events.h>
+#include <krampushack2018/factories/entity_factory.hpp>
+#include <krampushack2018/music_track_nums.hpp>
+#include <krampushack2018/user_events.hpp>
 #include <cmath>
 
 

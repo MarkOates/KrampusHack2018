@@ -3,8 +3,8 @@
 
 #include <allegro_flare/framework.h>
 #include <allegro_flare/user_event_emitter.h>
-#include <krampushack2018/screens/title_screen.h>
-#include <krampushack2018/user_events.h>
+#include <krampushack2018/screens/title_screen.hpp>
+#include <krampushack2018/user_events.hpp>
 
 
 

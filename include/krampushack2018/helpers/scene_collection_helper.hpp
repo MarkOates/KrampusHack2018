@@ -2,13 +2,13 @@
 
 
 
-#include <krampushack2018/entities/damage_zone_entity.h>
-#include <krampushack2018/entities/door_entity.h>
-#include <krampushack2018/entities/entity_base.h>
-#include <krampushack2018/entities/item_entity.h>
-#include <krampushack2018/entities/kid_entity.h>
-#include <krampushack2018/entities/krampus_entity.h>
-#include <krampushack2018/models/scene.h>
+#include <krampushack2018/entities/damage_zone_entity.hpp>
+#include <krampushack2018/entities/door_entity.hpp>
+#include <krampushack2018/entities/entity_base.hpp>
+#include <krampushack2018/entities/item_entity.hpp>
+#include <krampushack2018/entities/kid_entity.hpp>
+#include <krampushack2018/entities/krampus_entity.hpp>
+#include <krampushack2018/models/scene.hpp>
 
 
 

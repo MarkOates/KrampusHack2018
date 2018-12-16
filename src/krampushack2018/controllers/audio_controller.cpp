@@ -1,10 +1,10 @@
 
 
 
-#include <krampushack2018/controllers/audio_controller.h>
+#include <krampushack2018/controllers/audio_controller.hpp>
 
 #include <allegro_flare/framework.h>
-#include <krampushack2018/music_track_nums.h>
+#include <krampushack2018/music_track_nums.hpp>
 
 
 

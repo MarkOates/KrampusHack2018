@@ -1,15 +1,15 @@
 
 
 
-#include <krampushack2018/helpers/scene_collision_helper.h>
+#include <krampushack2018/helpers/scene_collision_helper.hpp>
 
 #include <allegro_flare/user_event_emitter.h>
-#include <krampushack2018/entities/damage_zone_entity.h>
-#include <krampushack2018/entities/entity_base.h>
-#include <krampushack2018/entities/kid_entity.h>
-#include <krampushack2018/entities/krampus_entity.h>
-#include <krampushack2018/helpers/scene_collection_helper.h>
-#include <krampushack2018/user_events.h>
+#include <krampushack2018/entities/damage_zone_entity.hpp>
+#include <krampushack2018/entities/entity_base.hpp>
+#include <krampushack2018/entities/kid_entity.hpp>
+#include <krampushack2018/entities/krampus_entity.hpp>
+#include <krampushack2018/helpers/scene_collection_helper.hpp>
+#include <krampushack2018/user_events.hpp>
 
 
 

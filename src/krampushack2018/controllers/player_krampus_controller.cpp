@@ -1,7 +1,7 @@
 
 
 
-#include <krampushack2018/controllers/player_krampus_controller.h>
+#include <krampushack2018/controllers/player_krampus_controller.hpp>
 
 #include <allegro_flare/useful.h> // for key_pressed()
 

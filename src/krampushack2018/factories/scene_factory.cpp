@@ -1,10 +1,10 @@
 
 
 
-#include <krampushack2018/factories/scene_factory.h>
+#include <krampushack2018/factories/scene_factory.hpp>
 
-#include <krampushack2018/factories/entity_factory.h>
-#include <krampushack2018/entities/entity_base.h>
+#include <krampushack2018/factories/entity_factory.hpp>
+#include <krampushack2018/entities/entity_base.hpp>
 
 
 

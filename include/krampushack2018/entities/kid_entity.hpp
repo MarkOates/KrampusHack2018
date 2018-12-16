@@ -2,10 +2,10 @@
 
 
 
-#include <krampushack2018/entities/entity_base.h>
+#include <krampushack2018/entities/entity_base.hpp>
 
 #include <allegro_flare/shader.h>
-#include <krampushack2018/sprite_sheet.h>
+#include <krampushack2018/sprite_sheet.hpp>
 
 
 
