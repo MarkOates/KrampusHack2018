@@ -3,6 +3,7 @@
 
 
 #include <allegro_flare/objects/bitmap_object.h>
+#include <krampushack2018/models/Bitmap3D.hpp>
 #include <vector>
 #include <string>
 
@@ -14,7 +15,7 @@ private:
    placement2d place;
    std::vector<std::string> pages;
    ALLEGRO_FONT *font;
-   BitmapObject bitmap;
+   Bitmap3D bitmap;
    bool showing_continue_notification;
 
 public:

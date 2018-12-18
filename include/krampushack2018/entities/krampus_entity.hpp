@@ -29,7 +29,7 @@ public:
    bool facing_right;
    bool _has_weapon;
    bool _has_stone_of_defiance;
-   BitmapObject club_bitmap;
+   Bitmap3D club_bitmap;
    SpriteSheet *sprite_sheet;
 
    bool set_state(state_t new_state, bool override_if_busy=false);

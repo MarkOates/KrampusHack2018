@@ -3,6 +3,7 @@
 
 
 #include <allegro_flare/inventory.h>
+#include <krampushack2018/models/Bitmap3D.hpp>
 #include <krampushack2018/models/naughty_list.hpp>
 #include <krampushack2018/sprite_sheet.hpp>
 
@@ -24,14 +25,14 @@ private:
 
    mode_t mode;
    void set_mode(mode_t new_mode);
-   BitmapObject chrome_bitmap;
+   Bitmap3D chrome_bitmap;
    ALLEGRO_FONT *font;
    ALLEGRO_FONT *font_bigger;
    SpriteSheet sprite_sheet;
-   BitmapObject club_item_bitmap;
-   BitmapObject key_item_bitmap;
-   BitmapObject stone_of_defiance_item_bitmap;
-   BitmapObject naughty_list_item_bitmap;
+   Bitmap3D club_item_bitmap;
+   Bitmap3D key_item_bitmap;
+   Bitmap3D stone_of_defiance_item_bitmap;
+   Bitmap3D naughty_list_item_bitmap;
    float black_bar_counter;
 
 public:
