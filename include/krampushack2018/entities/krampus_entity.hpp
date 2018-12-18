@@ -16,6 +16,8 @@ public:
       WALKING_DOWN,
       WALKING_RIGHT,
       WALKING_LEFT,
+      RUNNING_RIGHT,
+      RUNNING_LEFT,
       STANDING,
       CELEBRATING,
       ATTACKING,
@@ -26,6 +28,7 @@ public:
    float state_counter;
    bool state_is_busy;
    int walking_speed;
+   int running_speed;
    bool facing_right;
    bool _has_weapon;
    bool _has_stone_of_defiance;
@@ -48,6 +51,8 @@ public:
    void walk_down();
    void walk_left();
    void walk_right();
+   void run_left();
+   void run_right();
    void face_left();
    void face_right();
    void use_stone_of_defiance();
