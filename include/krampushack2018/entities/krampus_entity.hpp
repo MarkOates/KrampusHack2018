@@ -12,12 +12,10 @@ class KrampusEntity : public EntityBase
 public:
    enum state_t
    {
-      WALKING_UP,
-      WALKING_DOWN,
-      WALKING_RIGHT,
-      WALKING_LEFT,
-      RUNNING_RIGHT,
-      RUNNING_LEFT,
+      MOVING_UP,
+      MOVING_DOWN,
+      MOVING_RIGHT,
+      MOVING_LEFT,
       STANDING,
       CELEBRATING,
       ATTACKING,
@@ -47,10 +45,10 @@ public:
    void attack();
    void stand_still();
    void celebrate();
-   void walk_up();
-   void walk_down();
-   void walk_left();
-   void walk_right();
+   void move_up();
+   void move_down();
+   void move_left();
+   void move_right();
    void run_left();
    void run_right();
    void face_left();

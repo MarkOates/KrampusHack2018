@@ -15,7 +15,7 @@ KrampusEntity::KrampusEntity(ElementID *parent, SpriteSheet *sprite_sheet, float
    : EntityBase(parent, "krampus", x, y)
    , state_is_busy(false)
    , walking_speed(5.0)
-   , running_speed(10.0)
+   , running_speed(11.0)
    , facing_right(true)
    , _has_weapon(false)
    , _has_stone_of_defiance(false)
@@ -53,19 +53,35 @@ void KrampusEntity::update()
 
    switch(state)
    {
-   case WALKING_UP:
-   case WALKING_DOWN:
-   case WALKING_LEFT:
-   case WALKING_RIGHT:
+   case MOVING_LEFT:
+      {
+         float final_velocity = walking_speed;
+         if (key_pressed(ALLEGRO_KEY_R)) final_velocity = running_speed;
+         velocity.position = vec2d(-final_velocity, 0.0);
+
+         float bounce_counter = sin(al_get_time()*36)*0.5 + 0.5;
+         bitmap.anchor(0, bounce_counter * -12);
+      }
+      break;
+   case MOVING_RIGHT:
+      {
+         float final_velocity = walking_speed;
+         if (key_pressed(ALLEGRO_KEY_R)) final_velocity = running_speed;
+         velocity.position = vec2d(final_velocity, 0.0);
+
+         float bounce_counter = sin(al_get_time()*36)*0.5 + 0.5;
+         bitmap.anchor(0, bounce_counter * -12);
+      }
+      break;
+   case MOVING_UP:
       {
          float bounce_counter = sin(al_get_time()*36)*0.5 + 0.5;
          bitmap.anchor(0, bounce_counter * -12);
       }
       break;
-   case RUNNING_LEFT:
-   case RUNNING_RIGHT:
+   case MOVING_DOWN:
       {
-         float bounce_counter = sin(al_get_time()*36)*0.7 + 0.5;
+         float bounce_counter = sin(al_get_time()*36)*0.5 + 0.5;
          bitmap.anchor(0, bounce_counter * -12);
       }
       break;
@@ -154,44 +170,44 @@ void KrampusEntity::stand_still()
 
 
 
-void KrampusEntity::walk_up()
+void KrampusEntity::move_up()
 {
-   set_state(WALKING_UP);
+   set_state(MOVING_UP);
 }
 
 
 
-void KrampusEntity::walk_down()
+void KrampusEntity::move_down()
 {
-   set_state(WALKING_DOWN);
+   set_state(MOVING_DOWN);
 }
 
 
 
-void KrampusEntity::walk_left()
+void KrampusEntity::move_left()
 {
-   set_state(WALKING_LEFT);
+   set_state(MOVING_LEFT);
 }
 
 
 
-void KrampusEntity::walk_right()
+void KrampusEntity::move_right()
 {
-   set_state(WALKING_RIGHT);
+   set_state(MOVING_RIGHT);
 }
 
 
 
 void KrampusEntity::run_left()
 {
-   set_state(RUNNING_LEFT);
+   set_state(MOVING_LEFT);
 }
 
 
 
 void KrampusEntity::run_right()
 {
-   set_state(RUNNING_RIGHT);
+   set_state(MOVING_RIGHT);
 }
 
 
@@ -237,33 +253,23 @@ bool KrampusEntity::set_state(state_t new_state, bool override_if_busy)
 
    switch(new_state)
    {
-   case WALKING_UP:
+   case MOVING_UP:
       bitmap.bitmap(sprite_sheet->get_sprite(18));
       velocity.position = vec2d(0.0, -walking_speed/2);
       break;
-   case WALKING_DOWN:
+   case MOVING_DOWN:
       bitmap.bitmap(sprite_sheet->get_sprite(18));
       velocity.position = vec2d(0.0, walking_speed/2);
       break;
-   case WALKING_LEFT:
+   case MOVING_LEFT:
       bitmap.bitmap(sprite_sheet->get_sprite(18));
       face_left();
       velocity.position = vec2d(-walking_speed, 0.0);
       break;
-   case WALKING_RIGHT:
+   case MOVING_RIGHT:
       bitmap.bitmap(sprite_sheet->get_sprite(18));
       face_right();
       velocity.position = vec2d(walking_speed, 0.0);
-      break;
-   case RUNNING_LEFT:
-      bitmap.bitmap(sprite_sheet->get_sprite(18));
-      face_left();
-      velocity.position = vec2d(-running_speed, 0.0);
-      break;
-   case RUNNING_RIGHT:
-      bitmap.bitmap(sprite_sheet->get_sprite(18));
-      face_right();
-      velocity.position = vec2d(running_speed, 0.0);
       break;
    case STANDING:
       bitmap.anchor(0, 0);

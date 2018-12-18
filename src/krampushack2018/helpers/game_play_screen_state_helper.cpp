@@ -152,7 +152,7 @@ void GamePlayScreenStateHelper::update_state()
          KrampusEntity *krampus = collections.get_krampus();
          if (previous_state_counter < 0.3 && state_counter >= 0.3)
          {
-            krampus->walk_down();
+            krampus->move_down();
          }
          if (previous_state_counter < 0.7 && state_counter >= 0.7)
          {

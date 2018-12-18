@@ -61,10 +61,10 @@ void PlayerKrampusController::update_polled_keyboard_input()
 {
    if (krampus->is_idle())
    {
-      if (key_pressed(ALLEGRO_KEY_RIGHT)) krampus->walk_right();
-      if (key_pressed(ALLEGRO_KEY_LEFT)) krampus->walk_left();
-      if (key_pressed(ALLEGRO_KEY_UP)) krampus->walk_up();
-      if (key_pressed(ALLEGRO_KEY_DOWN)) krampus->walk_down();
+      if (key_pressed(ALLEGRO_KEY_RIGHT)) krampus->move_right();
+      if (key_pressed(ALLEGRO_KEY_LEFT)) krampus->move_left();
+      if (key_pressed(ALLEGRO_KEY_UP)) krampus->move_up();
+      if (key_pressed(ALLEGRO_KEY_DOWN)) krampus->move_down();
    }
 }
 
