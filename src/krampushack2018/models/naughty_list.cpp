@@ -8,8 +8,8 @@
 
 NaughtyList::Kid::Kid(std::string name, int sprite_index, int scene_id, behavior_t behavior)
    : name(name)
-   , scene_id(scene_id)
    , sprite_index(sprite_index)
+   , scene_id(scene_id)
    , behavior(behavior)
    , killed(false)
 {}

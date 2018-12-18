@@ -11,8 +11,8 @@ class StoryboardScreen : public Screen
 {
 private:
    ALLEGRO_FONT *text_font;
-   int current_page;
    std::vector<std::string> pages;
+   int current_page;
    intptr_t event_to_emit_after_completing;
 
 public:

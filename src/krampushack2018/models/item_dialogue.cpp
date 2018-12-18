@@ -12,9 +12,9 @@
 
 ItemDialogue::ItemDialogue(float x, float y, float w, float h, ALLEGRO_BITMAP *item_bitmap, ALLEGRO_FONT *font, std::vector<std::string> pages)
    : place(x, y, w, h)
-   , bitmap(item_bitmap)
-   , font(font)
    , pages(pages)
+   , font(font)
+   , bitmap(item_bitmap)
    , showing_continue_notification(false)
 {
    bitmap.align(0.5, 0.5);

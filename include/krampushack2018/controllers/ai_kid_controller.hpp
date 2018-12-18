@@ -9,8 +9,8 @@
 class AIKidController
 {
 private:
-   float state_counter;
    KidEntity *kid;
+   float state_counter;
    KidEntity::state_t _get_a_random_state();
    KidEntity::state_t _get_a_random_state_different_from_current_one();
    void set_new_state();

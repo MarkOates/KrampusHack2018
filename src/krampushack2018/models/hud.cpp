@@ -19,12 +19,12 @@ HUD::HUD(Inventory *player_inventory, NaughtyList *naughty_list)
    , chrome_bitmap(nullptr)
    , font(Framework::font("ChronoTrigger.ttf 40"))
    , font_bigger(Framework::font("ChronoTrigger.ttf 55"))
-   , black_bar_counter(0)
    , sprite_sheet("sprites_grid-07.png", 34, 34, 6, 6, 3)
    , club_item_bitmap(nullptr)
    , key_item_bitmap(nullptr)
    , stone_of_defiance_item_bitmap(nullptr)
    , naughty_list_item_bitmap(nullptr)
+   , black_bar_counter(0)
 {
    ALLEGRO_BITMAP *bmp = create_pixel_perfect_scaled_render(Framework::bitmap("top_hud-02.png"), 5);
    chrome_bitmap.bitmap(bmp);
