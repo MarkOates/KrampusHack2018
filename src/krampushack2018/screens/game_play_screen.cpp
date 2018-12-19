@@ -22,8 +22,8 @@
 
 GamePlayScreen::GamePlayScreen(Display *display)
    : Screen(display)
-   , scene(nullptr)
    , state(NONE)
+   , scene(nullptr)
    , player_krampus_controller()
    , ai_kid_controllers()
    , player_inventory()
@@ -158,7 +158,6 @@ void GamePlayScreen::enter_scene(int scene_id, char door_name)
    for (auto &kid : naughty_list_kids)
    {
       float min_y, max_y;
-      float scene_width = scene->get_width();
       scene->get_y_bounds(&min_y, &max_y);
 
       float new_kid_x = random_float(0, scene->get_width());

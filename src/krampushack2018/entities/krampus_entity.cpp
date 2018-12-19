@@ -13,6 +13,8 @@
 
 KrampusEntity::KrampusEntity(ElementID *parent, SpriteSheet *sprite_sheet, float x, float y)
    : EntityBase(parent, "krampus", x, y)
+   , state(STANDING)
+   , state_counter(0)
    , state_is_busy(false)
    , walking_speed(5.0)
    , running_speed(11.0)
@@ -20,7 +22,6 @@ KrampusEntity::KrampusEntity(ElementID *parent, SpriteSheet *sprite_sheet, float
    , _has_weapon(false)
    , _has_stone_of_defiance(false)
    , club_bitmap(nullptr)
-   , state(STANDING)
    , sprite_sheet(sprite_sheet)
 {
    place.size = vec2d(120, 30);

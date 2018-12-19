@@ -38,6 +38,7 @@ private:
    Shader *flat_color_shader;
    float identity_reveal_counter;
    ALLEGRO_BITMAP *kid_bitmap, *identity_bitmap;
+
    ALLEGRO_COLOR get_identity_color();
    float get_identity_tint_intensity();
 
