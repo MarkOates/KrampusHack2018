@@ -3,7 +3,7 @@
 
 
 #include <krampushack2018/models/Bitmap3D.hpp>
-#include <allegro_flare/placement3d.h>
+#include <allegro_flare/placement2d.h>
 #include <allegro_flare/element_id.h>
 
 
@@ -11,8 +11,8 @@
 class EntityBase : public ElementID
 {
 public:
-   placement3d place;
-   placement3d velocity;
+   placement2d place;
+   placement2d velocity;
    Bitmap3D bitmap;
 
    EntityBase(ElementID *parent, std::string type, float x, float y);

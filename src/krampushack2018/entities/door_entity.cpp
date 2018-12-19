@@ -11,7 +11,7 @@ DoorEntity::DoorEntity(ElementID *parent, std::string name, int destination_scen
    bitmap.bitmap(door_img);
    bitmap.align(0.5, 1.0);
    bitmap.scale(1.5, 1.2);
-   place.size = vec3d(80, 5, 0);
+   place.size = vec2d(80, 5);
 
    set("door_name", name);
    set("destination_scene", destination_scene);

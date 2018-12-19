@@ -7,14 +7,13 @@
 
 EntityBase::EntityBase(ElementID *parent, std::string type, float x, float y)
    : ElementID(parent)
-   , place(x, y, 0)
+   , place(x, y, 20, 10)
    , velocity()
    , bitmap(nullptr)
 {
    set("type", type);
-   place.size = vec3d(20, 10, 0);
-   velocity.scale = vec3d(0, 0, 0);
-   velocity.align = vec3d(0, 0, 0);
+   velocity.scale = vec2d(0, 0);
+   velocity.align = vec2d(0, 0);
 }
 
 
@@ -55,7 +54,7 @@ bool EntityBase::collides(const EntityBase &other)
    // this will not account for rotation or anything fancy.
    // it's an unofficial ballpark close enough for jazz doodad:
 
-   return other.place.collide(place.size.x, place.size.y, h_height, h_width, h_height, h_width);
+   return other.place.collide(place.x, place.y, h_height, h_width, h_height, h_width);
 }
 
 

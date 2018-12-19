@@ -189,7 +189,7 @@ void GamePlayScreen::enter_scene(int scene_id, char door_name)
    // place krampus at the destination_door and walk down
    if (door)
    {
-      krampus->place.position = door->place.position + vec2d(0.0, door->place.size.y/2 + krampus->place.size.y/2) + 5;
+      krampus->place.position = door->place.position + vec2d(0.0, door->place.h/2 + krampus->place.h/2) + 5;
    }
 
    set_state(ENTERING_THROUGH_DOOR);

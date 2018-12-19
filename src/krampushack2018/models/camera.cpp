@@ -25,11 +25,11 @@ void Camera::update(float max_x)
 {
    motion.update(al_get_time());
 
-   if (target) place.position.x = target->place.position.x;
-   place.position.y = place.size.y/2;
+   if (target) place.x = target->place.x;
+   place.y = place.h/2;
 
-   if (place.position.x < place.size.x/2) place.position.x = place.size.x/2;
-   if (place.position.x > max_x-place.size.x/2) place.position.x = max_x-place.size.x/2;
+   if (place.x < place.w/2) place.x = place.w/2;
+   if (place.x > max_x-place.w/2) place.x = max_x-place.w/2;
 }
 
 
@@ -50,7 +50,7 @@ void Camera::restore_transform()
 
 void Camera::draw_overlay()
 {
-   al_draw_filled_rectangle(0, 0, place.size.x, place.size.y, overlay_color);
+   al_draw_filled_rectangle(0, 0, place.w, place.h, overlay_color);
 }
 
 
