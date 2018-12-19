@@ -25,7 +25,7 @@ KidEntity::KidEntity(ElementID *parent, SpriteSheet *sprite_sheet, Shader *flat_
    , kid_bitmap(sprite_sheet->get_sprite(sprite_index))
    , identity_bitmap(sprite_sheet->get_sprite(identity_sprite_index))
 {
-   place.size = vec2d(60, 30);
+   place.size = vec3d(60, 30, 0);
 
    if (sprite_index < 0) sprite_index = random_int(0, 16);
    bitmap.bitmap(kid_bitmap);
@@ -145,22 +145,22 @@ void KidEntity::set_state(state_t new_state)
    switch (state)
    {
    case STATE_STANDING_STILL:
-      velocity.position = vec2d(0.0, 0.0);
+      velocity.position = vec3d(0.0, 0.0, 0);
       break;
    case STATE_WALKING_UP:
-      velocity.position = vec2d(0.0, -walk_speed/2);
+      velocity.position = vec3d(0.0, -walk_speed/2, 0);
       break;
    case STATE_WALKING_DOWN:
-      velocity.position = vec2d(0.0, walk_speed/2);
+      velocity.position = vec3d(0.0, walk_speed/2, 0);
       break;
    case STATE_WALKING_LEFT:
-      velocity.position = vec2d(-walk_speed, 0.0);
+      velocity.position = vec3d(-walk_speed, 0.0, 0);
       break;
    case STATE_WALKING_RIGHT:
-      velocity.position = vec2d(walk_speed, 0.0);
+      velocity.position = vec3d(walk_speed, 0.0, 0);
       break;
    case STATE_TAKING_HIT:
-      velocity.position = vec2d(0.0, 0.0);
+      velocity.position = vec3d(0.0, 0.0, 0.0);
       UserEventEmitter::emit_event(PLAY_SOUND_EFFECT, HURT_SOUND_EFFECT);
       reveal_behavior();
       break;

@@ -9,7 +9,7 @@ DamageZoneEntity::DamageZoneEntity(ElementID *parent, std::string damage_zone_ty
    : EntityBase(parent, "damage_zone", x, y)
    , dealing_damage(true)
 {
-   place.size = vec2d(w, h);
+   place.size = vec3d(w, h, 10);
    set("damage_zone_type", damage_zone_type);
 }
 

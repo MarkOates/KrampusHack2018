@@ -112,6 +112,18 @@ void placement3d::build_reverse_transform(ALLEGRO_TRANSFORM *transform)
 
 
 
+void placement3d::transform_coordinates(float *xx, float *yy, float *zz)
+{
+   ALLEGRO_TRANSFORM transform;
+   this->build_transform(&transform);
+
+   al_invert_transform(&transform);
+   al_transform_coordinates_3d(&transform, xx, yy, zz);
+}
+
+
+
+
 vec3d placement3d::get_real_position()
 {
    vec3d real_position(0, 0, 0);
@@ -135,6 +147,21 @@ placement3d& placement3d::operator+=(const placement3d& other)
    anchor += other.anchor;
    rotation += other.rotation;
    return *this;
+}
+
+
+
+bool placement3d::collide(float x, float y, float z)
+{
+   transform_coordinates(&x, &y, &z);
+
+   if (x < 0) return false;
+   if (x > size.x) return false;
+   if (y < 0) return false;
+   if (y > size.y) return false;
+   if (z < 0) return false;
+   if (z > size.z) return false;
+   return true;
 }
 
 

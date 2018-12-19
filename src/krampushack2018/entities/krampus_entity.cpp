@@ -23,7 +23,7 @@ KrampusEntity::KrampusEntity(ElementID *parent, SpriteSheet *sprite_sheet, float
    , state(STANDING)
    , sprite_sheet(sprite_sheet)
 {
-   place.size = vec2d(120, 30);
+   place.size = vec3d(120, 30, 0);
    bitmap.bitmap(sprite_sheet->get_sprite(18));
    bitmap.align(0.5, 1.0);
    bitmap.scale(2.0, 2.0);
@@ -57,7 +57,7 @@ void KrampusEntity::update()
       {
          float final_velocity = walking_speed;
          if (key_pressed(ALLEGRO_KEY_R)) final_velocity = running_speed;
-         velocity.position = vec2d(-final_velocity, 0.0);
+         velocity.position = vec3d(-final_velocity, 0.0, 0.0);
 
          float bounce_counter = sin(al_get_time()*36)*0.5 + 0.5;
          bitmap.anchor(0, bounce_counter * -12);
@@ -67,7 +67,7 @@ void KrampusEntity::update()
       {
          float final_velocity = walking_speed;
          if (key_pressed(ALLEGRO_KEY_R)) final_velocity = running_speed;
-         velocity.position = vec2d(final_velocity, 0.0);
+         velocity.position = vec3d(final_velocity, 0.0, 0.0);
 
          float bounce_counter = sin(al_get_time()*36)*0.5 + 0.5;
          bitmap.anchor(0, bounce_counter * -12);
@@ -105,7 +105,7 @@ void KrampusEntity::update()
             float dh = place.h;
             float dy = place.y;
             float dw = 80;
-            float dx = facing_right ? place.x + place.w : place.x - place.w;
+            float dx = facing_right ? place.position.x + place.size.x : place.position.x - place.size.x;
             if (has_weapon())
             {
                UserEventEmitter::emit_event(PLAY_SOUND_EFFECT, STRONG_PUNCH_SOUND_EFFECT);
@@ -255,26 +255,26 @@ bool KrampusEntity::set_state(state_t new_state, bool override_if_busy)
    {
    case MOVING_UP:
       bitmap.bitmap(sprite_sheet->get_sprite(18));
-      velocity.position = vec2d(0.0, -walking_speed/2);
+      velocity.position = vec3d(0.0, -walking_speed/2, 0.0);
       break;
    case MOVING_DOWN:
       bitmap.bitmap(sprite_sheet->get_sprite(18));
-      velocity.position = vec2d(0.0, walking_speed/2);
+      velocity.position = vec3d(0.0, walking_speed/2, 0.0);
       break;
    case MOVING_LEFT:
       bitmap.bitmap(sprite_sheet->get_sprite(18));
       face_left();
-      velocity.position = vec2d(-walking_speed, 0.0);
+      velocity.position = vec3d(-walking_speed, 0.0, 0.0);
       break;
    case MOVING_RIGHT:
       bitmap.bitmap(sprite_sheet->get_sprite(18));
       face_right();
-      velocity.position = vec2d(walking_speed, 0.0);
+      velocity.position = vec3d(walking_speed, 0.0, 0.0);
       break;
    case STANDING:
       bitmap.anchor(0, 0);
       bitmap.bitmap(sprite_sheet->get_sprite(18));
-      velocity.position = vec2d(0.0, 0.0);
+      velocity.position = vec3d(0.0, 0.0, 0.0);
       club_bitmap.position(bitmap.w()/2 + 36, bitmap.h()-20);
       club_bitmap.rotation(FULL_ROTATION * 0.25 - 0.2);
       break;
@@ -282,20 +282,20 @@ bool KrampusEntity::set_state(state_t new_state, bool override_if_busy)
       bitmap.anchor(0, 0);
       state_is_busy = true;
       bitmap.bitmap(sprite_sheet->get_sprite(19));
-      velocity.position = vec2d(0.0, 0.0);
+      velocity.position = vec3d(0.0, 0.0, 0.0);
       club_bitmap.position(bitmap.w()/2, 10);
       club_bitmap.rotation(FULL_ROTATION * -0.2);
       break;
    case CELEBRATING:
       bitmap.anchor(0, 0);
       bitmap.bitmap(sprite_sheet->get_sprite(19));
-      velocity.position = vec2d(0.0, 0.0);
+      velocity.position = vec3d(0.0, 0.0, 0.0);
       break;
    case USING_MAGIC:
       bitmap.anchor(0, 0);
       state_is_busy = true;
       bitmap.bitmap(sprite_sheet->get_sprite(19));
-      velocity.position = vec2d(0.0, 0.0);
+      velocity.position = vec3d(0.0, 0.0, 0.0);
       UserEventEmitter::emit_event(USE_STONE_OF_DEFIANCE_EVENT);
       break;
    default:

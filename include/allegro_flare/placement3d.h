@@ -29,6 +29,7 @@ public:
 
    placement3d& operator+=(const placement3d& other);
 
+   void transform_coordinates(float *xx, float *yy, float *zz);
    vec3d get_real_position();
 
    bool collide(float x, float y, float z); // not implemented
